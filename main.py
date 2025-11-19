@@ -9,7 +9,7 @@ from boto3.dynamodb.conditions import Key
 
 # 環境変数とDynamoDBの初期化
 AWS_REGION = os.getenv("AWS_REGION", "ap-northeast-1")
-TABLE_NAME = os.getenv("DDB_TABLE_NAME", "dev-fridgeiot-dynamodb-iot-1-yamayama")
+TABLE_NAME = os.getenv("DDB_TABLE_NAME", "")
 
 dynamodb = boto3.resource("dynamodb", region_name=AWS_REGION)
 table = dynamodb.Table(TABLE_NAME)
